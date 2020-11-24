@@ -1,0 +1,29 @@
+<div class="breadcrumb">
+    <div class="container">
+        <a class="breadcrumb-item" routerLink="/Inicio">Inicio</a>
+        <span class="breadcrumb-item active">Registrarse</span>
+    </div>
+</div>
+<section class="static about-sec">
+    <div class="container">
+        <h1>Mi cuenta / Registrarse</h1>
+        <div class="form-group">
+            <form >
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" [(ngModel)]="UserEmail" id= "userid" placeholder="Introduzca su correo electronico" required>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="password" class="form-control" [(ngModel)]="UserPassword" id= "pswrd" placeholder="Contraseña" required>
+                    </div>
+                    <br>
+                    <div class="col-lg-8 col-md-12">
+                        <button class="btn black" (click)="addUser()">Registrarse</button>
+                        <h5>¿Registrado? <a routerLink="/IniciarSesion">Entre aquí</a></h5>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
