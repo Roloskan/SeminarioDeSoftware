@@ -1,6 +1,7 @@
 import { summaryFileName } from '@angular/compiler/src/aot/util';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-iniciarsesion',
@@ -30,6 +31,7 @@ export class IniciarsesionComponent implements OnInit {
           else{
             console.log("Lo siento, no estas autorizado");
             alert("Tus datos no estan autorizados, "  + this.username)
+            window.open('/Registrarse')
           }
         }
 

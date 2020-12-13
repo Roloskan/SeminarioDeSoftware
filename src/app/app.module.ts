@@ -8,10 +8,14 @@ import { AppComponent } from './app.component';
 import {SharedService} from './shared.service';
 
 import {HttpClientModule} from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     routingComponents        
   ],
   imports: [
@@ -19,6 +23,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     ReactiveFormsModule
   ],
   providers: [SharedService],
